@@ -1,0 +1,17 @@
+a{
+    font-weight: 100;
+    color: #fff;
+    display: block;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+.navItem{
+    font-weight: 100;
+}
+
+a:hover{
+    background: rgba(0, 0, 0, 0) linear-gradient(to right, #728192, #202c3b) repeat scroll 0% 0%;
+    color: #fff;
+
+}
