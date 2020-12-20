@@ -4,14 +4,16 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import 'font-awesome/css/font-awesome.min.css'
 import Logo from '../components/templates/Logo.jsx'
 import Nav from '../components/templates/Nav.jsx'
-import Main from '../components/templates/Main.jsx'
 import Footer from '../components/templates/Footer.jsx'
-import Home from '../components/templates/home/Home.jsx'
+import { BrowserRouter } from 'react-router-dom'
+import Routes from '../components/templates/Routes.jsx'
 
-export default props => 
-    <div className="app">
-        <Logo></Logo>
-        <Nav></Nav>
-        <Home></Home>
-        <Footer></Footer>
-    </div>
+export default props =>
+    <BrowserRouter>
+        <div className="app">
+            <Logo></Logo>
+            <Nav></Nav>
+            <Routes></Routes>
+            <Footer></Footer>
+        </div>
+    </BrowserRouter>
