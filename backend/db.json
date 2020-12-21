@@ -1,9 +1,19 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Joao da Silva",
-      "email": "joao@hotmail.com"
+      "name": "lucas",
+      "email": "lucas@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "carlos123",
+      "email": "carlos123@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "asd",
+      "email": "asdda",
+      "id": 3
     }
   ]
 }

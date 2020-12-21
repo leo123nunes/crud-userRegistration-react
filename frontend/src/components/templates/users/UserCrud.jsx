@@ -85,11 +85,11 @@ export default class Users extends Component {
         return (
             <table className="table col-12 p-0">
                 <th className="col-12 p-0 ">
-                    <tr className="col-12 p-0">
-                        <th className="col-1">Id</th>
-                        <th className="col-3">Name</th>
-                        <th className="col-3">Email</th>
-                        <th className="col-3">Actions</th>
+                    <tr key={"tableItems"}className="d-flex p-0">
+                        <th className="col-1"><strong>ID</strong></th>
+                        <th className="col-4"><strong>Name</strong></th>
+                        <th className="col-4"><strong>E-mail</strong></th>
+                        <th className="col-3"><strong>Actions</strong></th>
                     </tr>
                 </th>
                 <tbody>
@@ -110,18 +110,17 @@ export default class Users extends Component {
 
     renderRows() {
         return this.state.list.map(element => {
-            console.log(element)
             return (
-                <tr className="col-12 d-flex p-0">
+                <tr key={element.id} className="col-12 d-flex p-0">
                     <td className="col-1">{element.id}</td>
-                    <td className="col-3">{element.name}</td>
-                    <td className="col-3">{element.email}</td>
+                    <td className="col-4">{element.name}</td>
+                    <td className="col-4">{element.email}</td>
                     <td className="col-3">
                         <button className="btn btn-warning" onClick={e => this.load(element)}>
-                            <i className=""></i>
+                            <i className="fa fa-pencil"></i>
                         </button>
                         <button className="btn btn-danger ml-2" onClick={e => this.deleteUser(element)}>
-                            <i className=""></i>
+                            <i className="fa fa-trash"></i>
                         </button>
                     </td>
                 </tr>
@@ -130,7 +129,6 @@ export default class Users extends Component {
     }
 
     render() {
-        console.log(this.state.list)
         return (
             <Main {...userPage}>
                 {this.renderForm()}
