@@ -1,14 +1,9 @@
 {
-    "users":[
-        {
-            "id": "1",
-            "name": "Joao da Silva",
-            "email": "joao@hotmail.com"
-        },
-        {
-            "id": "2",
-            "name": "Maria Oliveira",
-            "email": "mariaoliveira@gmail.com"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "name": "Joao da Silva",
+      "email": "joao@hotmail.com"
+    }
+  ]
 }
