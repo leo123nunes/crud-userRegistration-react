@@ -54,14 +54,14 @@ export default class Users extends Component {
         return (
             <div className="form">
                 <div className="row">
-                    <div className="col-12">
-                        <div className="form-gropu">
+                    <div className="col-11">
+                        <div className="form-group">
                             <label className="">Name</label>
                             <input className="form-control" placeholder="Enter the name"
                                 onChange={e => this.updateField(e)} name="name" value={this.state.user.name}></input>
                         </div>
                     </div>
-                    <div className="col-12">
+                    <div className="col-11">
                         <div className="form-group">
                             <label className="">Email</label>
                             <input className="form-control" placeholder="Enter the email"
@@ -87,8 +87,8 @@ export default class Users extends Component {
                 <th className="col-12 p-0 ">
                     <tr key={"tableItems"}className="d-flex p-0">
                         <th className="col-1"><strong>ID</strong></th>
-                        <th className="col-4"><strong>Name</strong></th>
-                        <th className="col-4"><strong>E-mail</strong></th>
+                        <th className="col-3"><strong>Name</strong></th>
+                        <th className="col-5"><strong>E-mail</strong></th>
                         <th className="col-3"><strong>Actions</strong></th>
                     </tr>
                 </th>
@@ -113,8 +113,8 @@ export default class Users extends Component {
             return (
                 <tr key={element.id} className="col-12 d-flex p-0">
                     <td className="col-1">{element.id}</td>
-                    <td className="col-4">{element.name}</td>
-                    <td className="col-4">{element.email}</td>
+                    <td className="col-3">{element.name}</td>
+                    <td className="col-5">{element.email}</td>
                     <td className="col-3">
                         <button className="btn btn-warning" onClick={e => this.load(element)}>
                             <i className="fa fa-pencil"></i>

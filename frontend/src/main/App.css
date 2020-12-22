@@ -5,6 +5,7 @@
     --header-height: 100px;
     --aside-width: 225px;
     --footer-height: 40px;
+    --menu-height: 50px;
 
     --shadow: 
     0 2px 23px 0 rgb(31, 31, 31),
@@ -50,4 +51,48 @@ main.content{
 
 footer.footer{
     grid-area: footer;
+}
+
+@media(max-width: 768px){
+    .app{
+        margin: 0px;
+        display: grid;
+        grid-template-columns: var(--aside-width) 1fr;
+        grid-template-rows: var(--header-height) var(--menu-height) 1fr var(--footer-height);
+        grid-template-areas:
+        'logo header'
+        'menu menu'
+        'content content'
+        'footer footer';
+        height: 100vh;
+        background-color: #F5F5F5;
+
+    }
+
+    .menu-area{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .app header.header{
+        box-shadow: none;
+    }
+}
+
+@media(max-width: 576px){
+    .app{
+        margin: 0px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: var(--header-height) var(--menu-height) 1fr var(--footer-height);
+        grid-template-areas:
+        'logo'
+        'menu'
+        'content'
+        'footer';
+        height: 100vh;
+        background-color: #F5F5F5;
+
+    }
 }
